@@ -6,7 +6,6 @@ from pydub.utils import which
 from tkinter import Tk, filedialog
 from tqdm import tqdm  
 
-# Configurar ffmpeg para pydub automáticamente
 AudioSegment.converter = which("ffmpeg")
 
 def dividir_audio(audio_path, chunk_length_ms=60000):
