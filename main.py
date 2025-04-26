@@ -52,7 +52,7 @@ def main():
         recognizer = sr.Recognizer()
         texto_final = transcribir_audio_por_chunks(audio_chunks, recognizer)
 
-        output_dir = r"C:\Users\lenovo2024\OneDrive\Documentos\Transcript\Text"
+        output_dir = r"C:\Documentos\Transcript\Text"
         os.makedirs(output_dir, exist_ok=True)
         base_name = os.path.basename(video_path).rsplit(".", 1)[0]
         output_file = os.path.join(output_dir, f"{base_name}.txt")
@@ -61,7 +61,7 @@ def main():
             f.write(texto_final)
 
         print(f"✅ Transcripción guardada en: {output_file}")
-        os.remove(audio_path)  # Limpiar el audio extraído
+        os.remove(audio_path)  
     else:
         print("❌ No se seleccionó ningún archivo.")
 
